@@ -1,0 +1,49 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODM0NTkyOTEsImV4cCI6MTY4MzQ1OTMwNiwiYXVkIjoiNjQ1NzRjYTc4NGIwYmNjMzc5ZjkyZDljIiwiaXNzIjoiY2xvdWQgY29tcHV0aW5nIGNlbGwifQ.351Px5FGNk11cXuUKpzo4lPeublyv9P5Fa-lGrTTQDc
+
+
+###
+POST  http://localhost:3000/auth/login
+Content-Type:application/json
+
+{
+    "email": "abheytyagi010@gmail.com",
+    "password": "Deepak980@"
+}
+
+###
+
+POST http://localhost:3000/auth/register
+Content-Type:application/json
+
+{
+    "email": "Kartik010@gmail.com",
+    "studentname": "Kartik",
+    "studentnumber": "21002",
+    "section": "2",
+    "Branch": "CSE",
+    "phonenumber":"9310725157",
+    "password": "Deepak980@"
+}
+
+###
+
+POST http://localhost:3000/auth/refresh-token
+Content-Type:application/json
+
+{
+    "refreshtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODM0NTg3OTIsImV4cCI6MTcxNTAxNjM5MiwiYXVkIjoiNjQ1NzRjYTc4NGIwYmNjMzc5ZjkyZDljIiwiaXNzIjoiY2xvdWQgY29tcHV0aW5nIGNlbGwifQ.LcaOuZWTOecYyWr20egii0t176C8yBtw4K2ga7R4A2k"
+}
+
+###
+DELETE htttp://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": 
+}
+
+# htttp://localhost:3000/auth/register
+# htttp://localhost:3000/auth/login
+# htttp://localhost:3000/auth/logout
+# htttp://localhost:3000/auth/refresh-token
