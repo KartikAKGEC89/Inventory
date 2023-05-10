@@ -13,17 +13,17 @@ Content-Type:application/json
 
 ###
 
-POST http://localhost:3000/auth/register
+POST http://localhost:8080/auth/register
 Content-Type:application/json
 
 {
-    "email": "Kartik010@gmail.com",
-    "studentname": "Kartik",
-    "studentnumber": "21002",
+    "email": "ay010@gmail.com",
+    "studentname": "abhey",
+    "studentnumber": "21122",
     "section": "2",
     "Branch": "CSE",
-    "phonenumber":"9310725157",
-    "password": "Deepak980@"
+    "phonenumber":"9990997836",
+    "password": "Deepak@90"
 }
 
 ###
