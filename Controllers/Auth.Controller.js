@@ -15,7 +15,7 @@ module.exports = {
       // if (!email || !password) throw createError.BadRequest()
       const result = await authSchema.validateAsync(req.body)
 
-      const doesExist = await User.find({ email: result.email})
+      const doesExist = await User.findOne({ email: result.email})
       if (doesExist)
         throw createError.Conflict(`${result.email} is already been registered`)
 
@@ -34,7 +34,7 @@ module.exports = {
   login: async (req, res, next) => {
     try {
       const result = await authSchema.validateAsync(req.body)
-      const user = await User.find({ email: result.email })
+      const user = await User.findOne({ email: result.email })
       if (!user) throw createError.NotFound('User not registered')
 
       const isMatch = await user.isValidPassword(result.password)
