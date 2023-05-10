@@ -15,32 +15,33 @@ const app = express()
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(cors());
 
-app.get('/', verifyAccessToken, async (req, res, next) => {
-    res.send('Hello from express.')
-  })
+// app.get('/', verifyAccessToken, async (req, res, next) => {
+//     res.send('Hello from express.')
+//   })
 
 app.use('/auth', AuthRoute)
 
 // 
 // error message if route not found 
 
-app.use(async (req,res,next) => {
-    // const error = new Error ("not found")
-    // error.status = 404
-    // next(error)
-    next(createError.NotFound())
-})
+// app.use(async (req,res,next) => {
+//     // const error = new Error ("not found")
+//     // error.status = 404
+//     // next(error)
+//     next(createError.NotFound())
+// })
 
-app.use(async (err,req,res,next) => {
-    res.status(err.status || 500)
-    res.send({
-        error:{
-        status: err.status || 500,
-        message: err.message,
-    }
-    })
-})
+// app.use(async (err,req,res,next) => {
+//     res.status(err.status || 500)
+//     res.send({
+//         error:{
+//         status: err.status || 500,
+//         message: err.message,
+//     }
+//     })
+// })
 
 // 
 
