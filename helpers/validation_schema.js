@@ -5,8 +5,8 @@ const authSchema = Joi.object({
     email: Joi.string().email().lowercase().required(),
     studentname: Joi.string().required(),
     studentnumber: Joi.string().required(),
-    section: Joi.string().required(),
-    Branch: Joi.string().required(),
+    section: Joi.string(),
+    Branch: Joi.string(),
     phonenumber: Joi.string().required(),
     password: Joi.string().min(8).required(),
 })

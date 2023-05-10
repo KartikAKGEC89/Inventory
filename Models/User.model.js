@@ -24,12 +24,10 @@ const UserSchema =new mongoose.Schema({
     section: {
       type: String,
       required: true,
-      unique: true
     },
     Branch: {
       type: String,
       required: true,
-      unique: true
     },
     phonenumber: {
       type: String,
@@ -39,6 +37,7 @@ const UserSchema =new mongoose.Schema({
     password: {
         type: String,
         required: true,
+        unique: true
       },
 })
 
